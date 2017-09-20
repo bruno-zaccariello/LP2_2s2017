@@ -1,0 +1,29 @@
+y = 0
+agenda={
+'nome':[],
+'email':[],
+'telefone':[],
+'endereco':[]
+}
+
+tupla= tuple(agenda.keys())
+while x!=4 :
+    x=int(input("Digite 1 para inserir, 2 remover, 3 pesquisar, 4 sair"))
+    if x = 1:
+        nom[y] = input("Digite um nome: ")
+        email[y] = input("Digite um e-mail: ")
+        tel[y] = input("Digite um número de telefone: ")
+        ende[y] = input("Digite um endereço: ")
+        if not agenda in tupla:
+    elif x = 2:
+        del_nome = input("Digite um nome para deletar: ")
+#comando para deletar       
+        del lista [del_nome]
+    elif x = 3:
+#comando para consultar o dicionário
+        #comando para exibir os dados do dicionario
+        'nome' = agenda.keys()
+        print(agenda[])
+y=+1
+
+print("nom, email, tel, ende")
