@@ -1,0 +1,59 @@
+h1 {
+    color : crimson;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+.box {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: lightgrey;
+    text-align: center;
+}
+
+.display {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+div.questao {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+    background-color: #989898;
+    width: 80%;
+    max-height: 300px;
+}
+
+div.respondido {
+    color: #3A827E;
+    width: 45%;
+    margin: 5px;
+    border: 1px solid black;
+    overflow-y: scroll;
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+    border-bottom: 1px solid gray;
+}
+
+li {
+    font-weight: 600;
+}
+
+div.naorespondido {
+    color: #CB435E;
+    width: 45%;
+    margin: 5px;
+    border: 1px solid black;
+    overflow-y: scroll;
+}

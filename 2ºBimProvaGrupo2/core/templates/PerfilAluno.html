@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block scripts %}
+	{{ block.super}}
+	<link rel="stylesheet" type="text/css" href="/static/css/site.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/Perfil.css">
+	<title>Faculdade Lorenzinni - Perfil Aluno</title>
+{% endblock %}
+{% block conteudo %}
+		
+    <div class="content">
+        <h1> Área do Aluno </h1>
+
+        <br/>
+
+        <div class="display">
+
+            <a class="aoption" href="/EnviarMensagem"> <div class="option">  Enviar Mensagem </div> </a> 
+
+            <a class="aoption" href="/Nova_Senha"> <div class="option"> Mudar Senha </div> </a> 
+
+            <a class="aoption" href="/AvisosRecebidos"> <div class="option"> Avisos </div> </a> 
+        
+            <a class="aoption" href="/QuestoesRecebidas"> <div class="option"> Atividades </div> </a> 
+            
+            <a class="aoption" href="/Matricular"> <div class="option"> Matricule-se </div> </a> 
+
+        </div>
+    
+    </div>
+
+{% endblock %}

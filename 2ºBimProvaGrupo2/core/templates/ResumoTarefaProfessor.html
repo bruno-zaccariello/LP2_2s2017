@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block scripts %}
+	{{ block.super}}
+    <link rel="stylesheet" type="text/css" href="/static/css/site.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/ResumoTarefaProfessor.css">
+	<title>Faculdade Lorenzinni - Respostas</title>
+{% endblock %}
+{% block conteudo %}
+		
+    <div class="box">
+        <h1> Questoes </h1>
+        
+        <div class="display">
+        
+            <div class="questao">
+                
+                <div class="respondido">
+                    <h2>RESPONDIDO</h2>
+                {% for key,value in questoesr.items %}
+                        {{ key }}
+                        <ul class="respondido">
+                            {% for key2,value2 in value.items %}
+                                {% for aluno in value2 %}
+                                    <li>{{ aluno.nome }}</li>
+                                {% endfor %}
+                            {% endfor %}
+                        </ul>
+                 {% endfor %}
+                </div>
+                    
+                <div class="naorespondido">
+                    <h2>NAO RESPONDIDO</h2>
+                {% for key,value in questoesnr.items %}
+                        {{ key }}
+                        <ul class="naorespondido">
+                            {% for key2,value2 in value.items %}
+                                {% for aluno in value2 %}
+                                    <li>{{ aluno.nome }}</li>
+                                {% endfor %}
+                            {% endfor %}
+                        </ul>
+                {% endfor %}
+                </div>
+            </div>    
+        
+    </div>
+
+{% endblock %}

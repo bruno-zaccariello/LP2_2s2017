@@ -1,0 +1,45 @@
+h1 {
+    color:Blue;
+}
+
+.content {
+    width: 40%;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    height: auto;
+    background-color: lightgray;
+}
+
+.display {
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 240px;
+    margin: 10px auto;
+    max-height: 350px;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
+a.aoption {
+    text-decoration: none;
+    width: 220px;
+}
+
+.option {
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 12px;
+    background-color: black;
+    transition: 0.7s;
+    border-radius: 10px;
+}
+
+.option:hover {
+    background-color: white;
+    color: black;
+}

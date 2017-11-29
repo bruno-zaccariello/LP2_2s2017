@@ -1,0 +1,35 @@
+  {% extends 'base.html' %}
+  {% block scripts %}
+  	{{ block.super}}
+  	<link rel="stylesheet" type="text/css" href="/static/css/site.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/CadastrarDisciplina.css">
+    <title>Faculdade Lorenzinni - Cadastro de Disciplina</title>
+  {% endblock %}
+  {% block conteudo %}
+  <body>	
+	<div class="Container">
+	
+		<h1>Cadastrar Disciplina</h1>
+	
+		<div class="DivNew">
+			
+			<form class="ContatoForm" method="POST">
+			
+			{% csrf_token %}
+			
+			{% for field in form %}
+					{{ field.errors }}
+					<div class="DivInput">{{ field.label_tag }} {{ field }}</div>
+			{% endfor %}
+			
+			<button class="botaoReset" type="reset">Limpar</button>
+			<button class="botaoLogin" type="submit">Enviar</button><br/>
+		
+					
+			</form>
+			
+		</div>
+	
+	</div>
+  </body>
+ {% endblock %}

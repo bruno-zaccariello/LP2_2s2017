@@ -1,0 +1,50 @@
+  {% extends 'base.html' %}
+  {% block scripts %}
+  	{{ block.super}}
+  		<link rel="stylesheet" type="text/css" href="/static/css/site.css">
+			<link rel="stylesheet" type="text/css" href="/static/css/LoginPage.css">
+ 			<title>Faculdade Lorenzinni - Login</title>
+  {% endblock %}
+  {% block conteudo %}
+  <body>
+	<div class="LoginBox">
+		
+		<div class="LoginDiv">
+			
+			<p class="calltext">Já possui conta ?</p>
+			<h2>LOGIN :</h2>
+			
+			<form method="POST">
+				
+				{% csrf_token %}
+				{% for field in form %}
+
+					{{ field.errors }}
+					{{ field.label_tag }} <br/> <div class=input>{{ field }}</div>
+
+				{% endfor %}
+				
+				<input type="checkbox" name="RememberMe" id="RememberMe">
+				<label for="RememberMe">Lembre-se de mim</label><br/>
+				
+				<button class="botaoReset" type="reset">Limpar</button>
+				<button class="botaoLogin" type="submit">Login</button><br/>
+			
+			</form>
+
+			<a class="ForgotPass" href="/Nova_Senha">Esqueci minha senha</a>
+		
+		</div>
+		
+		<div class="CadastroDiv">
+		
+			<p class="calltext">Novo no site ?</p>
+			<h2>CADASTRE-SE :</h2>
+			
+			<a href="/Cadastre-se"><button class="botaoCadastro" type="submit">Cadastre-se</button></a>
+		
+		</div>
+	
+	</div>
+  </body>
+  {% endblock %}

@@ -1,0 +1,7 @@
+O Código está a maior parte na paste Core.
+	Views
+	Templates
+	Models
+	etc.
+
+Na pasta impacta está as configurações do django.

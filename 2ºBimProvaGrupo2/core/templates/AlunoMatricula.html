@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block scripts %}
+	{{ block.super}}
+        <link rel="stylesheet" type="text/css" href="/static/css/site.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/MensagemAluno.css">
+        <title>Faculdade Lorenzinni - Matricula</title>
+{% endblock %}
+{% block conteudo %}
+    
+    <div class="AvisoBox">
+
+        <h1> Faça Sua Matricula </h1>
+
+    <div class="Infos">
+        
+    <form method="POST">
+
+        {% csrf_token %}
+        {% if reg == True %}
+            <h2> JA REGISTRADO </h2>
+        {% endif %}
+        {% for field in form %}
+			{{ field.errors }}
+			<div class="DivInput">{{ field.label_tag }} {{ field }}</div>
+		{% endfor %}
+			
+		<button class="botaoReset" type="reset">Limpar</button>
+		<button class="botaoLogin" type="submit">Enviar</button><br/>
+
+    </form>
+    </div>
+    </div>
+
+{% endblock %}
